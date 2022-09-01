@@ -1,0 +1,7 @@
+# デフォルトの無視対象ファイル
+/shelf/
+/workspace.xml
+MagicalBattle.iml
+misc.xml
+modules.xml
+vcs.xml
