@@ -2,12 +2,12 @@ package character.type;
 
 public class WaterTypeCompatibilityCheck implements CompatibilityCheck {
     @Override
-    public AttributeType strong() {
-        return AttributeType.FIRE;
+    public Types strong() {
+        return Types.FIRE;
     }
 
     @Override
-    public AttributeType weak() {
-        return AttributeType.DIRT;
+    public Types weak() {
+        return Types.DIRT;
     }
 }

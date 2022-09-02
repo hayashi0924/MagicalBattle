@@ -3,12 +3,12 @@ package character.type;
 public class FireTypeCompatibilityCheck implements CompatibilityCheck {
 
     @Override
-    public AttributeType strong() {
-        return AttributeType.DIRT;
+    public Types strong() {
+        return Types.DIRT;
     }
 
     @Override
-    public AttributeType weak() {
-        return AttributeType.WATTER;
+    public Types weak() {
+        return Types.WATTER;
     }
 }

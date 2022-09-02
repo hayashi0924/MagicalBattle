@@ -1,7 +1,7 @@
 package character.name;
 
 public class Name {
-    final String name;
+    private final String name;
 
     private Name(final String name){
         this.name = name;

@@ -1,12 +1,12 @@
 package character.type;
 
-public enum AttributeType {
+public enum Types {
     FIRE("炎"),
     WATTER("水"),
     DIRT("土"),
     ;
     final String attribute;
-    AttributeType(final String attribute){
+    Types(final String attribute){
         this.attribute = attribute;
     }
 

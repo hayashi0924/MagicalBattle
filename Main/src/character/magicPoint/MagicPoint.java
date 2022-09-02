@@ -1,7 +1,7 @@
 package character.magicPoint;
 
 public class MagicPoint {
-    final int magicPoint;
+    private final int magicPoint;
 
     private MagicPoint(final int magicPoint){
         this.magicPoint = magicPoint;
@@ -14,5 +14,10 @@ public class MagicPoint {
                     Decision.MAX_VALUE + "までの間で指定してください");
         }
         return new MagicPoint(value);
+    }
+
+    private MagicPoint add(final MagicPoint magicPoint){
+        final int adding = this.magicPoint + magicPoint.magicPoint;
+        return new MagicPoint(adding);
     }
 }
