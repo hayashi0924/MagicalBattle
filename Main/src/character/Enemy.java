@@ -27,4 +27,10 @@ public class Enemy {
     public Type typeIs(){
         return this.type;
     }
+
+    public HitPoint damaged(final MagicPoint magicPoint){
+        final int afterValueOfHitPoint = magicPoint.getMagicPoint();
+        return HitPoint.afterHitPointSet(afterValueOfHitPoint);
+    }
+
 }

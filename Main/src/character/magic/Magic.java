@@ -12,6 +12,12 @@ import static character.type.Types.*;
 public class Magic {
     private static final Map<Type, Spell> magics = new HashMap<>();
     private final Type type;
+    /**
+     * 魔法に魔法攻撃力の概念はないのではと考え、
+     * 詠唱フィールドとした。
+     * 詠唱フィールドが魔法攻撃力を返す使用だが、
+     * この考えは正しいのか。
+     */
     private final Spell spell;
 
     private Magic(final Type type, final Spell spell){
@@ -28,7 +34,8 @@ public class Magic {
         return new Magic(select, magics.get(select));
     }
 
-    private MagicPoint chant(){
+    public MagicPoint chant(){
         return this.spell.chant();
     }
+    public Type attributes(){ return this.type; }
 }

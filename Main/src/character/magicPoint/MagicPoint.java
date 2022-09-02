@@ -16,8 +16,12 @@ public class MagicPoint {
         return new MagicPoint(value);
     }
 
-    private MagicPoint add(final MagicPoint magicPoint){
+    public MagicPoint add(final MagicPoint magicPoint){
         final int adding = this.magicPoint + magicPoint.magicPoint;
         return new MagicPoint(adding);
+    }
+
+    public int getMagicPoint(){
+        return this.magicPoint;
     }
 }

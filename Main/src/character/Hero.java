@@ -27,4 +27,20 @@ public class Hero {
     public Type typeIs(){
         return this.type;
     }
+
+    /**
+     * 疑問：MagicPointクラスで、intに変換する方法でよかったのか
+     * 　⇨MagicPointクラスのintをパブリックにしないのはなぜか
+     * @param magicPoint 敵の魔法力
+     * @return HitPoint 攻撃
+     */
+    public HitPoint damaged(final MagicPoint magicPoint){
+        final int afterValueOfHitPoint = magicPoint.getMagicPoint();
+        return HitPoint.afterHitPointSet(afterValueOfHitPoint);
+    }
+
+    public void chant(Enemy enemy){
+        enemy.damaged(this.magicPoint.add(this.magic.chant()));
+    }
+
 }
