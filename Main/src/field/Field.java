@@ -16,8 +16,10 @@ public class Field {
     public static Field create(){
         return new Field();
     }
-    public void set(Obstacle obstacle){
-        this.map[obstacle.coordinateIs().rowIs()][obstacle.coordinateIs().columnIs()] =
+    public void init(Obstacle obstacle){
+        this.map[obstacle.coordinateIs().getRow()][obstacle.coordinateIs().getColumn()] =
                 obstacle.typeIs().toString();
     }
+
+
 }

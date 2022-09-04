@@ -1,41 +1,33 @@
 package character.magic;
 
-import character.magicPoint.MagicPoint;
-import character.type.Type;
-import character.type.Types;
+import type.Type;
+import type.Types;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static character.type.Types.*;
-
 public class Magic {
-    private static final Map<Type, Spell> magics = new HashMap<>();
-    private final Type type;
-    /**
-     * 魔法に魔法攻撃力の概念はないのではと考え、
-     * 詠唱フィールドとした。
-     * 詠唱フィールドが魔法攻撃力を返す使用だが、
-     * この考えは正しいのか。
-     */
+    private final SpellList spellList;
     private final Spell spell;
 
-    private Magic(final Type type, final Spell spell){
-        this.type = type;
+
+    private Magic(SpellList spellList, Spell spell){
+        this.spellList = spellList;
         this.spell = spell;
     }
 
-    public static Magic set(Types type) {
-        magics.put(Type.set(FIRE), new SpellFire());
-        magics.put(Type.set(WATTER), new SpellWater());
-        magics.put(Type.set(DIRT), new SpellDirt());
+    public static Magic init(final SpellList spellList){
+        final Map<SpellList, Spell> magic = new HashMap<>();
+        magic.put(SpellList.WEAK_FIRE, new Spell(SpellAndPoint.WEAK_FIRE, Type.init(Types.FIRE)));
+        magic.put(SpellList.WEAK_DIRT, new Spell(SpellAndPoint.WEAK_DIRT, Type.init(Types.DIRT)));
+        magic.put(SpellList.WEAK_WATER, new Spell(SpellAndPoint.WEAK_WATER, Type.init(Types.WATTER)));
+        magic.put(SpellList.FIRE, new Spell(SpellAndPoint.FIRE, Type.init(Types.FIRE)));
+        magic.put(SpellList.DIRT, new Spell(SpellAndPoint.DIRT, Type.init(Types.DIRT)));
+        magic.put(SpellList.WATER, new Spell(SpellAndPoint.WATER, Type.init(Types.WATTER)));
 
-        final Type select = Type.set(type);
-        return new Magic(select, magics.get(select));
+        return new Magic(spellList, magic.get(spellList));
     }
-
-    public MagicPoint chant(){
-        return this.spell.chant();
+    public Spell spell(){
+        return this.spell;
     }
-    public Type attributes(){ return this.type; }
 }

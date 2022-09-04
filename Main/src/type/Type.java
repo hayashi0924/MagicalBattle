@@ -1,6 +1,6 @@
-package character.type;
+package type;
 
-import character.Hero;
+import character.Character;
 
 public class Type {
     private final Types type;
@@ -13,16 +13,16 @@ public class Type {
         this.strongType = strongType;
     }
 
-    public static Type set(final Types type){
+    public static Type init(final Types type){
         Compatibility typeMeasure = new Compatibility();
         return new Type(type, typeMeasure.weak(type), typeMeasure.strong(type));
     }
 
-    private boolean valid(Hero hero){
-        return this.strongType == hero.typeIs().weakType;
+    public boolean effective(Character character){
+        return this.strongType == character.typeIs().weakType;
     }
-    private boolean inValid(Hero hero){
-        return this.weakType == hero.typeIs().strongType;
+    public boolean ineffective(Character character){
+        return this.weakType == character.typeIs().strongType;
     }
 
 }
