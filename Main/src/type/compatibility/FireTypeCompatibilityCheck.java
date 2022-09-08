@@ -1,6 +1,8 @@
-package type;
+package type.compatibility;
 
-public class FireTypeCompatibilityCheck implements CompatibilityCheck {
+import type.Types;
+
+class FireTypeCompatibilityCheck implements CompatibilityCheck {
 
     @Override
     public Types strong() {
