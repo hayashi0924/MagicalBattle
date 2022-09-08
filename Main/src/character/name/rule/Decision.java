@@ -10,10 +10,6 @@ public class Decision {
         rules = new HashSet();
     }
 
-    public void add(final NamingRule rule){
-        rules.add(rule);
-    }
-
     public boolean isValid(final String name){
         for(NamingRule each : rules){
             if(!each.isValid(name)){
