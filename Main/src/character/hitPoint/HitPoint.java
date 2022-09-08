@@ -1,6 +1,6 @@
 package character.hitPoint;
 
-import character.magicPoint.MagicPoint;
+import character.attackPoint.AttackPoint;
 
 public class HitPoint {
     private final int hitPoint;
@@ -38,9 +38,9 @@ public class HitPoint {
     /**
      * 現在のヒットポイントから、マジックポイントを引いた値を返す。
      */
-    public HitPoint minus(final MagicPoint magicPoint){
+    public HitPoint minus(final AttackPoint attackPoint){
         // まずは引く
-        final int after = this.hitPoint - magicPoint.getMagicPoint();
+        final int after = this.hitPoint - attackPoint.getMagicPoint();
         return attach(after);
     }
 }

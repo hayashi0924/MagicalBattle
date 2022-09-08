@@ -1,14 +1,14 @@
 package character.magic;
 
-import character.magicPoint.MagicPoint;
+import character.attackPoint.AttackPoint;
 
 class SpellAndPoint {
-    final static MagicPoint WEAK_FIRE = MagicPoint.init(5);
-    final static MagicPoint WEAK_DIRT = MagicPoint.init(5);
-    final static MagicPoint WEAK_WATER = MagicPoint.init(5);
-    final static MagicPoint FIRE = MagicPoint.init(10);
-    final static MagicPoint DIRT = MagicPoint.init(10);
-    final static MagicPoint WATER = MagicPoint.init(10);
+    final static AttackPoint WEAK_FIRE = AttackPoint.init(5);
+    final static AttackPoint WEAK_DIRT = AttackPoint.init(5);
+    final static AttackPoint WEAK_WATER = AttackPoint.init(5);
+    final static AttackPoint FIRE = AttackPoint.init(10);
+    final static AttackPoint DIRT = AttackPoint.init(10);
+    final static AttackPoint WATER = AttackPoint.init(10);
 
     
 
