@@ -19,11 +19,11 @@ public class Type {
         return new Type(type, typeMeasure.weak(type), typeMeasure.strong(type));
     }
 
-    public boolean effective(Character character){
-        return this.strongType == character.typeIs().weakType;
+    public Types getWeakType(){
+        return this.weakType;
     }
-    public boolean ineffective(Character character){
-        return this.weakType == character.typeIs().strongType;
+    public Types getStrongType(){
+        return this.strongType;
     }
 
 }

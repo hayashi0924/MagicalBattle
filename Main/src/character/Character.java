@@ -2,6 +2,7 @@ package character;
 
 import character.hitPoint.HitPoint;
 import character.attackPoint.AttackPoint;
+import character.magic.Magic;
 import character.name.Name;
 import field.point.Point;
 import type.Type;
@@ -39,14 +40,19 @@ public class Character {
     //式：相手のhp - 自分の攻撃力 - 自分の魔法攻撃力
     //備考：相手の苦手タイプで攻撃した場合、魔法攻撃力が2倍になる
     public void attack(Character enemy){
-        AttackPoint baseSpellAttackPoint = this.magic.spell().getMagicPoint();
-        if(this.type.effective(enemy)){
-            enemy.damaged(this.attackPoint.add(baseSpellAttackPoint.effective()));
-        }else if(this.type.ineffective(enemy)){
-            enemy.damaged(this.attackPoint.add(baseSpellAttackPoint.ineffective()));
-        }else{
-            enemy.damaged(this.attackPoint.add(baseSpellAttackPoint));
+        AttackPoint baseMagicAttackPoint = this.magic.getAttackPoint();
+
+        boolean compatibilityIsEffective = this.type.getWeakType() == enemy.type.getStrongType();
+        boolean compatibilityIsIneffective = this.type.getStrongType() == enemy.type.getWeakType();
+
+        if(!(compatibilityIsEffective && compatibilityIsIneffective)){
+            enemy.damaged(this.attackPoint.add(baseMagicAttackPoint));
+        }
+        if(compatibilityIsEffective){
+            enemy.damaged(this.attackPoint.add(baseMagicAttackPoint.effective()));
+        }
+        if(compatibilityIsIneffective){
+            enemy.damaged(this.attackPoint.add(baseMagicAttackPoint.ineffective()));
         }
     }
-
 }

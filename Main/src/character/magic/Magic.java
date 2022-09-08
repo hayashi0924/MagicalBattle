@@ -4,7 +4,7 @@ import character.attackPoint.AttackPoint;
 import type.Type;
 import type.Types;
 
-enum Magic {
+public enum Magic {
     WEAK_FIRE("弱い炎", Type.init(Types.FIRE), AttackPointOfSpell.WEAK_FIRE),
     WEAK_DIRT("弱い土", Type.init(Types.DIRT), AttackPointOfSpell.WEAK_DIRT),
     WEAK_WATER("弱い水", Type.init(Types.WATTER), AttackPointOfSpell.WEAK_WATER),
