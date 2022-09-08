@@ -26,4 +26,11 @@ enum SpellList {
         return this.name;
     }
 
+    public Type getType(){
+        return this.type;
+    }
+
+    public AttackPoint getAttackPoint() {
+        return attackPoint;
+    }
 }
