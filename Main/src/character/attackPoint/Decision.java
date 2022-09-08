@@ -1,4 +1,4 @@
-package character.magicPoint;
+package character.attackPoint;
 
 class Decision {
     static final int MIN_VALUE = 5;
