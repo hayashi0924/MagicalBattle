@@ -4,13 +4,9 @@ import character.magic.Magic;
 import character.magic.SpellList;
 import character.magicPoint.MagicPoint;
 import character.name.Name;
-import field.Field;
-import point.Point;
-import obstacle.Obstacle;
+import field.point.Point;
 import type.Type;
 
-import static obstacle.Type.ROCK;
-import static obstacle.Type.WEED;
 import static type.Types.DIRT;
 import static type.Types.FIRE;
 

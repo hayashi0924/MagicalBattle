@@ -1,4 +1,4 @@
-package point;
+package field.point;
 
 import field.Range;
 
@@ -18,25 +18,10 @@ public class Point {
         return new Point(row, column);
     }
 
-    public Point moveUp(){
-        return init(this.row + MoveLength.normal, this.column);
-    }
-    public Point moveDown(){
-        return init(this.row - MoveLength.normal, this.column);
-    }
-    public Point moveLeft(){
-        return init(this.row, this.column - MoveLength.normal);
-    }
-    public Point moveRight(){
-        return init(this.row, this.column + MoveLength.normal);
-    }
-
-
     public int getRow(){
         return this.row;
     }
     public int getColumn(){
         return this.column;
     }
-
 }

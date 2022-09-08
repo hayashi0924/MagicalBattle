@@ -1,4 +1,4 @@
-package obstacle;
+package field.obstacle;
 
 public enum Type {
     ROCK("岩"),
