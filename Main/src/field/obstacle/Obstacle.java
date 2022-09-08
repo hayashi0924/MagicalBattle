@@ -1,6 +1,6 @@
-package obstacle;
+package field.obstacle;
 
-import point.Point;
+import field.point.Point;
 
 public class Obstacle {
     private final Point point;
@@ -11,7 +11,7 @@ public class Obstacle {
         this.point = point;
     }
 
-    public Point coordinateIs(){
+    public Point pointIs(){
         return this.point;
     }
     public Type typeIs(){
