@@ -1,7 +1,6 @@
 package character;
 
 import character.hitPoint.HitPoint;
-import character.magic.Magic;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
 import field.point.Point;
