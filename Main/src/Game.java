@@ -1,32 +1,34 @@
-import character.Enemy;
-import character.Hero;
+import character.Character;
 import character.hitPoint.HitPoint;
 import character.magic.Magic;
+import character.magic.SpellList;
 import character.magicPoint.MagicPoint;
 import character.name.Name;
-import character.type.Type;
 import field.Field;
-import coordinate.Coordinate;
+import point.Point;
 import obstacle.Obstacle;
+import type.Type;
 
-import static character.type.Types.DIRT;
-import static character.type.Types.FIRE;
 import static obstacle.Type.ROCK;
 import static obstacle.Type.WEED;
+import static type.Types.DIRT;
+import static type.Types.FIRE;
 
 
 public class Game {
     public static void main(String[] args) {
-        Hero hero =
-                new Hero(Name.set("林"), HitPoint.set(1000), MagicPoint.set(30), Type.set(FIRE), Magic.set(FIRE));
+        Character hero =
+                new Character(Name.init("林"), HitPoint.init(1000), MagicPoint.init(30),
+                        Type.init(FIRE), Magic.init(SpellList.FIRE), Point.init(0, 0));
 
-        Enemy enemy =
-                new Enemy(Name.set("ゴブリン"), HitPoint.set(100), MagicPoint.set(5), Type.set(DIRT), Magic.set(DIRT));
+        Character enemy =
+                new Character(Name.init("ゴブリン"), HitPoint.init(100), MagicPoint.init(5),
+                        Type.init(DIRT), Magic.init(SpellList.WEAK_DIRT), Point.init(10, 12));
 
-        Field field = Field.create();
-        field.set(new Obstacle(ROCK, Coordinate.set(1, 1)));
-        field.set(new Obstacle(WEED, Coordinate.set(5, 5)));
-
+        /*Field field = Field.create();
+        field.init(new Obstacle(ROCK, Point.init(1, 1)));
+        field.init(new Obstacle(WEED, Point.init(5, 5)));
+        */
 
 
     }

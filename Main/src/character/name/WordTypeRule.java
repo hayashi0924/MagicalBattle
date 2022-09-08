@@ -1,6 +1,6 @@
 package character.name;
 
-public class WordTypeRule implements NamingRule{
+class WordTypeRule implements NamingRule{
 
 
     @Override

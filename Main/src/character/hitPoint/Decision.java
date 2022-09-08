@@ -1,6 +1,5 @@
 package character.hitPoint;
-
-public class Decision {
+class Decision {
     static final int SET_MIN_VALUE = 100;
     static final int SET_MAX_VALUE = 1000;
 

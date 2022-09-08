@@ -1,18 +1,18 @@
 package obstacle;
 
-import coordinate.Coordinate;
+import point.Point;
 
 public class Obstacle {
-    private final Coordinate coordinate;
+    private final Point point;
     private final Type type;
 
-    public Obstacle(Type type, Coordinate coordinate){
+    public Obstacle(Type type, Point point){
         this.type = type;
-        this.coordinate = coordinate;
+        this.point = point;
     }
 
-    public Coordinate coordinateIs(){
-        return this.coordinate;
+    public Point coordinateIs(){
+        return this.point;
     }
     public Type typeIs(){
         return this.type;

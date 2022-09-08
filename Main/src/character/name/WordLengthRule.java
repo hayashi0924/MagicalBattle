@@ -1,6 +1,6 @@
 package character.name;
 
-public class WordLengthRule implements NamingRule {
+class WordLengthRule implements NamingRule {
     static final int MIN_LENGTH = 1;
     static final int MAX_LENGTH = 5;
 

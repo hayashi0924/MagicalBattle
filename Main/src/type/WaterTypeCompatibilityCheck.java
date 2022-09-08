@@ -1,4 +1,4 @@
-package character.type;
+package type;
 
 public class WaterTypeCompatibilityCheck implements CompatibilityCheck {
     @Override

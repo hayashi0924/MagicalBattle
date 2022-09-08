@@ -3,7 +3,7 @@ package character.name;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Decision {
+class Decision {
     private final Set<NamingRule> rules;
 
     Decision(){
@@ -14,7 +14,7 @@ public class Decision {
         rules.add(rule);
     }
 
-    boolean wasValid(final String name){
+    boolean isValid(final String name){
         for(NamingRule each : rules){
             if(!each.isValid(name)){
                 throw new IllegalArgumentException("文字数は" +

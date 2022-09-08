@@ -1,5 +1,5 @@
 package character.name;
 
-public interface NamingRule {
+interface NamingRule {
     boolean isValid(String name);
 }
