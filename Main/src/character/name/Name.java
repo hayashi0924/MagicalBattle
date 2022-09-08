@@ -1,5 +1,9 @@
 package character.name;
 
+import character.name.rule.Decision;
+import character.name.rule.WordLengthRule;
+import character.name.rule.WordTypeRule;
+
 public class Name {
     private final String name;
 

@@ -1,20 +1,20 @@
-package character.name;
+package character.name.rule;
 
 import java.util.HashSet;
 import java.util.Set;
 
-class Decision {
+public class Decision {
     private final Set<NamingRule> rules;
 
     Decision(){
         rules = new HashSet();
     }
 
-    void add(final NamingRule rule){
+    public void add(final NamingRule rule){
         rules.add(rule);
     }
 
-    boolean isValid(final String name){
+    public boolean isValid(final String name){
         for(NamingRule each : rules){
             if(!each.isValid(name)){
                 throw new IllegalArgumentException("文字数は" +
