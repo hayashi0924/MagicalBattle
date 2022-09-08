@@ -2,7 +2,7 @@ package character.magic;
 
 import character.attackPoint.AttackPoint;
 
-class SpellAndPoint {
+class AttackPointOfSpell {
     final static AttackPoint WEAK_FIRE = AttackPoint.init(5);
     final static AttackPoint WEAK_DIRT = AttackPoint.init(5);
     final static AttackPoint WEAK_WATER = AttackPoint.init(5);
