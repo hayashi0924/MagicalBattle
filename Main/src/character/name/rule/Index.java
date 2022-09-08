@@ -8,4 +8,7 @@ public enum Index {
     Index(NamingRule rule){
         this.rule = rule;
     }
+    NamingRule rule(){
+        return this.rule;
+    }
 }
