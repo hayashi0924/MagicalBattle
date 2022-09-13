@@ -4,10 +4,10 @@ import character.magic.Magic;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
 import field.point.Point;
-import type.Type;
+import character.type.Type;
 
-import static type.Types.DIRT;
-import static type.Types.FIRE;
+import static character.type.Types.DIRT;
+import static character.type.Types.FIRE;
 
 
 public class Game {

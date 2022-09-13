@@ -1,8 +1,8 @@
 package character.magic;
 
 import character.attackPoint.AttackPoint;
-import type.Type;
-import type.Types;
+import character.type.Type;
+import character.type.Types;
 
 public enum Magic {
     WEAK_FIRE("弱い炎", Type.init(Types.FIRE), AttackPointOfSpell.WEAK_FIRE),

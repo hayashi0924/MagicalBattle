@@ -1,9 +1,8 @@
 package field;
 
 import character.Character;
-import field.move.Direction;
+import field.point.move.Direction;
 import field.obstacle.Obstacle;
-import character.*;
 
 public class Field {
     private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];

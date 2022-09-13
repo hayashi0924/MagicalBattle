@@ -1,4 +1,4 @@
-package field.move;
+package field.point.move;
 
 import field.point.Point;
 

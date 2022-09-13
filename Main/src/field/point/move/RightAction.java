@@ -1,12 +1,11 @@
-package field.move;
+package field.point.move;
 
 import field.point.Point;
 
-class UpAction implements Action{
-
+class RightAction implements Action{
     @Override
     public Point go(Point point) {
-        return Point.init(point.getRow() + MoveLength.normal, point.getColumn());
+        return Point.init(point.getRow(), point.getColumn() + MoveLength.normal);
     }
 
     @Override

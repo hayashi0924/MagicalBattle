@@ -1,4 +1,4 @@
-package type;
+package character.type;
 
 public enum Types {
     FIRE("炎"),

@@ -5,7 +5,9 @@ import character.attackPoint.AttackPoint;
 import character.magic.Magic;
 import character.name.Name;
 import field.point.Point;
-import type.Type;
+import character.type.Type;
+
+
 
 public class Character {
     private final Name name;
@@ -28,8 +30,6 @@ public class Character {
         return this.type;
     }
     public Point pointIs(){ return this.point;}
-
-
 
     private void damaged(final AttackPoint attackPoint){
         this.hitPoint = this.hitPoint.minus(attackPoint);

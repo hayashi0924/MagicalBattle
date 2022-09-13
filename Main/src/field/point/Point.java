@@ -1,6 +1,7 @@
 package field.point;
 
 import field.Range;
+import field.point.move.Move;
 
 public class Point {
     private final int row;
