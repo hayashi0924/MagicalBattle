@@ -1,7 +1,6 @@
 import character.Character;
 import character.hitPoint.HitPoint;
 import character.magic.Magic;
-import character.magic.SpellList;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
 import field.point.Point;
