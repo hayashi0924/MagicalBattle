@@ -1,6 +1,8 @@
-package type;
+package type.compatibility;
 
-public class WaterTypeCompatibilityCheck implements CompatibilityCheck {
+import type.Types;
+
+class WaterTypeCompatibilityCheck implements CompatibilityCheck {
     @Override
     public Types strong() {
         return Types.FIRE;

@@ -1,4 +1,4 @@
-package character.name;
+package character.name.rule;
 
 class WordLengthRule implements NamingRule {
     static final int MIN_LENGTH = 1;

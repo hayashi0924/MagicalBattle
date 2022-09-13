@@ -1,6 +1,8 @@
-package type;
+package type.compatibility;
 
-public class DirtTypeCompatibilityCheck implements CompatibilityCheck {
+import type.Types;
+
+class DirtTypeCompatibilityCheck implements CompatibilityCheck {
     @Override
     public Types strong() {
         return Types.WATTER;

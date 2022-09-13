@@ -1,4 +1,4 @@
-package character.name;
+package character.name.rule;
 
 class WordTypeRule implements NamingRule{
 

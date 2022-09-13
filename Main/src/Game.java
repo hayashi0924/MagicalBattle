@@ -15,16 +15,13 @@ public class Game {
     public static void main(String[] args) {
         Character hero =
                 new Character(Name.init("林"), HitPoint.init(1000), AttackPoint.init(30),
-                        Type.init(FIRE), Magic.init(SpellList.FIRE), Point.init(0, 0));
+                        Type.init(FIRE), Magic.FIRE, Point.init(0, 0));
 
         Character enemy =
                 new Character(Name.init("ゴブリン"), HitPoint.init(100), AttackPoint.init(5),
-                        Type.init(DIRT), Magic.init(SpellList.WEAK_DIRT), Point.init(10, 12));
+                        Type.init(DIRT), Magic.WEAK_DIRT, Point.init(10, 12));
 
-        /*Field field = Field.create();
-        field.init(new Obstacle(ROCK, Point.init(1, 1)));
-        field.init(new Obstacle(WEED, Point.init(5, 5)));
-        */
+
 
 
     }

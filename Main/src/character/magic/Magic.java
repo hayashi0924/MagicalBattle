@@ -1,33 +1,36 @@
 package character.magic;
 
+import character.attackPoint.AttackPoint;
 import type.Type;
 import type.Types;
 
-import java.util.HashMap;
-import java.util.Map;
+public enum Magic {
+    WEAK_FIRE("弱い炎", Type.init(Types.FIRE), AttackPointOfSpell.WEAK_FIRE),
+    WEAK_DIRT("弱い土", Type.init(Types.DIRT), AttackPointOfSpell.WEAK_DIRT),
+    WEAK_WATER("弱い水", Type.init(Types.WATTER), AttackPointOfSpell.WEAK_WATER),
+    FIRE("炎", Type.init(Types.FIRE), AttackPointOfSpell.FIRE),
+    DIRT("土", Type.init(Types.DIRT), AttackPointOfSpell.DIRT),
+    WATER("水", Type.init(Types.WATTER), AttackPointOfSpell.WATER),
+    ;
+    private final String name;
+    private final Type type;
+    private final AttackPoint attackPoint;
 
-public class Magic {
-    private final SpellList spellList;
-    private final Spell spell;
+    Magic(final String name, final Type type, final AttackPoint attackPoint){
+        this.name = name;
+        this.type = type;
+        this.attackPoint = attackPoint;
+    };
 
-
-    private Magic(SpellList spellList, Spell spell){
-        this.spellList = spellList;
-        this.spell = spell;
+    public String toString(){
+        return this.name;
     }
 
-    public static Magic init(final SpellList spellList){
-        final Map<SpellList, Spell> magic = new HashMap<>();
-        magic.put(SpellList.WEAK_FIRE, new Spell(SpellAndPoint.WEAK_FIRE, Type.init(Types.FIRE)));
-        magic.put(SpellList.WEAK_DIRT, new Spell(SpellAndPoint.WEAK_DIRT, Type.init(Types.DIRT)));
-        magic.put(SpellList.WEAK_WATER, new Spell(SpellAndPoint.WEAK_WATER, Type.init(Types.WATTER)));
-        magic.put(SpellList.FIRE, new Spell(SpellAndPoint.FIRE, Type.init(Types.FIRE)));
-        magic.put(SpellList.DIRT, new Spell(SpellAndPoint.DIRT, Type.init(Types.DIRT)));
-        magic.put(SpellList.WATER, new Spell(SpellAndPoint.WATER, Type.init(Types.WATTER)));
-
-        return new Magic(spellList, magic.get(spellList));
+    public Type getType(){
+        return this.type;
     }
-    public Spell spell(){
-        return this.spell;
+
+    public AttackPoint getAttackPoint() {
+        return attackPoint;
     }
 }
