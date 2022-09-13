@@ -55,4 +55,13 @@ public class Character {
             enemy.damaged(this.attackPoint.add(baseMagicAttackPoint.ineffective()));
         }
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof Character object)){
+            return false;
+        }
+        boolean valid = object.name.equals(this.name) && object.hitPoint.equals(this.hitPoint) && object.attackPoint.equals(this.attackPoint)
+                && object.magic.equals(this.magic) && object.point.equals(this.point) && object.type.equals(this.type);
+        return valid;
+    }
 }
