@@ -1,4 +1,4 @@
-package field.point;
+package point;
 
 import field.Range;
 
@@ -24,4 +24,5 @@ public class Point {
     public int getColumn(){
         return this.column;
     }
+
 }

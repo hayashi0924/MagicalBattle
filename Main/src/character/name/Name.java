@@ -15,4 +15,9 @@ public class Name {
         }
         return new Name(name);
     }
+
+    public String toString(){
+        return this.name;
+    }
+
 }

@@ -1,6 +1,6 @@
-package type.compatibility;
+package character.type.compatibility;
 
-import type.Types;
+import character.type.Types;
 
 class FireTypeCompatibilityCheck implements CompatibilityCheck {
 

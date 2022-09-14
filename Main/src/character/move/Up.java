@@ -1,8 +1,8 @@
-package field.move;
+package character.move;
 
-import field.point.Point;
+import point.Point;
 
-class UpAction implements Action{
+class Up implements Action{
 
     @Override
     public Point go(Point point) {

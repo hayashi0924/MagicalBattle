@@ -1,7 +1,6 @@
-package type;
+package character.type;
 
-import character.Character;
-import type.compatibility.Compatibility;
+import character.type.compatibility.Compatibility;
 
 public class Type {
     private final Types type;
