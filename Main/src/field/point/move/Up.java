@@ -2,7 +2,7 @@ package field.point.move;
 
 import field.point.Point;
 
-class UpAction implements Action{
+class Up implements Action{
 
     @Override
     public Point go(Point point) {

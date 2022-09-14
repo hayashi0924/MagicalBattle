@@ -1,8 +1,8 @@
 package field;
 
 import character.Character;
-import field.point.move.Direction;
 import field.obstacle.Obstacle;
+import field.point.move.Move;
 
 public class Field {
     private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
@@ -16,22 +16,16 @@ public class Field {
     }
 
 
-
-    public static Field create(){
-        return new Field();
-    }
     public void obstacleInit(Obstacle obstacle){
         this.map[obstacle.pointIs().getRow()][obstacle.pointIs().getColumn()] =
                 obstacle.typeIs().toString();
     }
 
-    public void Position(Character character){
-        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = "人";
+    public void characterPosition(Character character){
+        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
     }
 
-
-    public void move(Direction direction){
+    public void move(Move move){
 
     }
-
 }

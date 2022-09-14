@@ -8,23 +8,15 @@ import java.util.Map;
 public class Move {
     private final static Map<Direction, Action> move = new HashMap<>();
 
-    private Move(){
-        move.put(Direction.UP, new UpAction());
-        move.put(Direction.DOWN, new DownAction());
-        move.put(Direction.RIGHT, new RightAction());
-        move.put(Direction.LEFT, new LeftAction());
+    {
+        move.put(Direction.UP, new Up());
+        move.put(Direction.DOWN, new Down());
+        move.put(Direction.RIGHT, new Right());
+        move.put(Direction.LEFT, new Left());
     }
 
-    public Action moveDown(){
-        return move.get(Direction.DOWN);
+    public Action move(Direction direction){
+        return move.get(direction);
     }
-    public Action moveUp(){
-        return move.get(Direction.UP);
-    }
-    public Action moveRight(){
-        return move.get(Direction.RIGHT);
-    }
-    public Action moveLeft(){
-        return move.get(Direction.LEFT);
-    }
+
 }

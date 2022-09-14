@@ -64,4 +64,8 @@ public class Character {
                 && object.magic.equals(this.magic) && object.point.equals(this.point) && object.type.equals(this.type);
         return valid;
     }
+
+    public String toString(){
+        return this.name.toString();
+    }
 }

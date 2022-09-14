@@ -2,10 +2,10 @@ package field.point.move;
 
 import field.point.Point;
 
-class LeftAction implements Action{
+class Down implements Action{
     @Override
     public Point go(Point point) {
-        return Point.init(point.getRow(), point.getColumn() - MoveLength.normal);
+        return Point.init(point.getRow() - MoveLength.normal, point.getColumn());
     }
 
     @Override
