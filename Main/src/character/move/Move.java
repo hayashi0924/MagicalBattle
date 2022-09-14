@@ -1,12 +1,14 @@
-package field.point.move;
-
-import field.point.Point;
+package character.move;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Move {
     private final static Map<Direction, Action> move = new HashMap<>();
+
+    private Move(){
+        ;
+    }
 
     {
         move.put(Direction.UP, new Up());
@@ -15,8 +17,7 @@ public class Move {
         move.put(Direction.LEFT, new Left());
     }
 
-    public Action move(Direction direction){
+    public static Action move(Direction direction){
         return move.get(direction);
     }
-
 }

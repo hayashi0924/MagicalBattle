@@ -1,4 +1,4 @@
-package field.point.move;
+package character.move;
 
 public enum Direction {
     UP,

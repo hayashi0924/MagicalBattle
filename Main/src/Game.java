@@ -3,7 +3,8 @@ import character.hitPoint.HitPoint;
 import character.magic.Magic;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
-import field.point.Point;
+import field.Field;
+import point.Point;
 import character.type.Type;
 
 import static character.type.Types.DIRT;
@@ -20,6 +21,7 @@ public class Game {
                 new Character(Name.init("ゴブリン"), HitPoint.init(100), AttackPoint.init(5),
                         Type.init(DIRT), Magic.WEAK_DIRT, Point.init(10, 12));
 
+        Field.create();
 
 
 

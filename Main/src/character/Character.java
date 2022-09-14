@@ -3,10 +3,11 @@ package character;
 import character.hitPoint.HitPoint;
 import character.attackPoint.AttackPoint;
 import character.magic.Magic;
+import character.move.Direction;
+import character.move.Move;
 import character.name.Name;
-import field.point.Point;
+import point.Point;
 import character.type.Type;
-
 
 
 public class Character {
@@ -72,4 +73,9 @@ public class Character {
     public String toString() {
         return this.name.toString();
     }
+
+    public Point move(Direction direction){
+        return Move.move(direction).go(this.pointIs());
+    }
+
 }

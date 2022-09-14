@@ -1,4 +1,4 @@
-package field.point;
+package point;
 
 import field.Range;
 

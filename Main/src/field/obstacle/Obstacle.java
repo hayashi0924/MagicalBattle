@@ -1,6 +1,6 @@
 package field.obstacle;
 
-import field.point.Point;
+import point.Point;
 
 public class Obstacle {
     private final Point point;
