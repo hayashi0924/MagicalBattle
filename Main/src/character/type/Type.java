@@ -14,8 +14,8 @@ public class Type {
     }
 
     public static Type init(final Types type){
-        Compatibility typeMeasure = new Compatibility();
-        return new Type(type, typeMeasure.weak(type), typeMeasure.strong(type));
+        Compatibility attribute = new Compatibility();
+        return new Type(type, attribute.weak(type), attribute.strong(type));
     }
 
     public Types getWeakType(){

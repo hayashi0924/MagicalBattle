@@ -4,7 +4,7 @@ public enum Index {
     LENGTH(new WordLengthRule()),
     TYPE(new WordTypeRule()),
     ;
-    private NamingRule rule;
+    NamingRule rule;
     Index(NamingRule rule){
         this.rule = rule;
     }
