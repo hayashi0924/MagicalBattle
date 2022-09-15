@@ -28,7 +28,7 @@ public class Field {
                 obstacle.typeIs().toString();
     }
 
-    public void characterPosition(Character character){
+    public void Position(Character character){
         this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
     }
 
