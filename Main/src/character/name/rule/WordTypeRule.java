@@ -5,6 +5,6 @@ class WordTypeRule implements NamingRule{
 
     @Override
     public boolean isValid(String name) {
-        return name.matches("^[あ-んア-ンー-龠]");
+        return name.matches("[あ-んア-ンー-龠]{1,10}");
     }
 }
