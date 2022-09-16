@@ -5,13 +5,16 @@ import character.move.Direction;
 import field.obstacle.Obstacle;
 import point.Point;
 
+import java.util.stream.Stream;
+
 public class Field {
-    private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+    private String[][] map;
     private static final String DOT = ".";
 
     private Field(){
-        for(int i =0; Range.rowIsValid(i - 1); i++){
-            for(int j = 0; Range.columnIsValid(j - 1); j++){
+        this.map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+        for(int i = 0; i < Range.MAX_ROW; i++){
+            for(int j = 0; j < Range.MAX_COLUMN; j++){
                 map[i][j] = DOT;
             }
         }
@@ -42,9 +45,9 @@ public class Field {
     }
 
     public void scene() {
-        for (String[] row : this.map) {
-            for(String colum : row){
-                System.out.print(colum);
+        for(int i = 0; i < Range.MAX_ROW; i++){
+            for(int j = 0; j < Range.MAX_COLUMN; j++){
+                System.out.print(map[i][j]);
             }
             System.out.println();
         }

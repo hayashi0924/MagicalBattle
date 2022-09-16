@@ -24,6 +24,7 @@ public class Game {
         Field field = Field.create();
         field.obstacleInit(new Obstacle((Type.ROCK), Point.init(5, 5)));
         field.obstacleInit(new Obstacle((Type.WEED), Point.init(6, 6)));
-        
+
+        field.scene();
     }
 }
