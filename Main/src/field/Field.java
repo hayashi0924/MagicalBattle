@@ -5,9 +5,6 @@ import character.move.Direction;
 import field.obstacle.Obstacle;
 import point.Point;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 public class Field {
     private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
     private static final String DOT = ".";
@@ -44,7 +41,12 @@ public class Field {
         this.map[character.move(direction).getRow()][character.move(direction).getColumn()] = character.toString();
     }
 
-    public void scene(){
-        Stream.of(map).forEach(System.out::println);
+    public void scene() {
+        for (String[] row : this.map) {
+            for(String colum : row){
+                System.out.print(colum);
+            }
+            System.out.println();
+        }
     }
 }
