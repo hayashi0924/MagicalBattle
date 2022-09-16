@@ -2,6 +2,7 @@ package field;
 
 import character.Character;
 import character.move.Direction;
+import character.move.Move;
 import field.obstacle.Obstacle;
 import point.Point;
 
@@ -39,7 +40,7 @@ public class Field {
         this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
     }
 
-    public void charMovement(Character character, Direction direction){
+    public void charMovement(Character character , Direction direction){
         this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = DOT;
         this.map[character.move(direction).getRow()][character.move(direction).getColumn()] = character.toString();
     }
