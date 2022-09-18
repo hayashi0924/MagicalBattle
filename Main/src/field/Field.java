@@ -59,6 +59,7 @@ public class Field {
             Stream.of(maps).filter(characterName -> character.toString().equals(characterName))
                     .map(beforeMove -> DOT).toArray(String[]::new);
         }
+
         this.map[point.getRow()][point.getColumn()] = character.toString();
     }
 
