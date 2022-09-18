@@ -39,26 +39,9 @@ public class Field {
         this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
     }
 
-    private boolean canMove(Point point){
-        for(Type types : Type.values()){
-            if(this.map[point.getRow()][point.getColumn()].equals(types.toString())){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public void move(Character character, Point point){
-        if(!canMove(point)){
-            throw new IllegalArgumentException("移動先には障害物があります。移動先を変更してください");
-        }
-        for(String[] maps : this.map){
-            Stream.of(maps).filter(characterName -> character.toString().equals(characterName))
-                    .map(beforeMove -> DOT).toArray(String[]::new);
-        }
-
-        this.map[point.getRow()][point.getColumn()] = character.toString();
-
+    public void charMovement(Character character, Direction direction){
+        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = DOT;
+        this.map[character.move(direction).getRow()][character.move(direction).getColumn()] = character.toString();
     }
 
     public void scene(){
