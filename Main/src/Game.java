@@ -31,6 +31,9 @@ public class Game {
         field.on(enemy, Point.init(9, 12));
 
         field.scene();
+        System.out.println();
+
+        field.move(hero, Point.init(2, 2));
 
         field.scene();
     }
