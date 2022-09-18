@@ -4,6 +4,7 @@ import character.Character;
 import character.move.Direction;
 import character.move.Move;
 import field.obstacle.Obstacle;
+import field.obstacle.Type;
 import point.Point;
 
 import java.util.stream.Stream;
@@ -36,13 +37,17 @@ public class Field {
         this.map[point.getRow()][point.getColumn()] = DOT;
     }
 
-    public void charPoint(Character character){
-        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
+    public void on(Character character, Point point){
+        this.map[point.getRow()][point.getColumn()] = character.toString();
     }
 
-    public void charMovement(Character character , Direction direction){
-        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = DOT;
-        this.map[character.move(direction).getRow()][character.move(direction).getColumn()] = character.toString();
+    public boolean canMove(Point point){
+        for(Type types : Type.values()){
+            if(this.map[point.getRow()][point.getColumn()].equals(types.toString())){
+                return false;
+            }
+        }
+        return true;
     }
 
     public void scene() {
