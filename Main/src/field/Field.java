@@ -10,12 +10,13 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class Field {
-    private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+    private String[][] map;
     private static final String DOT = ".";
 
     private Field(){
-        for(int i =0; Range.rowIsValid(i - 1); i++){
-            for(int j = 0; Range.columnIsValid(j - 1); j++){
+        this.map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+        for(int i =0; i < Range.MAX_ROW - 1; i++){
+            for(int j = 0; j < Range.MAX_COLUMN - 1; j++){
                 map[i][j] = DOT;
             }
         }
@@ -36,10 +37,6 @@ public class Field {
         this.map[point.getRow()][point.getColumn()] = DOT;
     }
 
-    public void charPoint(Character character){
-        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
-    }
-
     private boolean canMove(Point point){
         for(Type types : Type.values()){
             if(this.map[point.getRow()][point.getColumn()].equals(types.toString())){
@@ -54,14 +51,22 @@ public class Field {
             System.out.println("障害物のあるマスです。別の座標を指定してください。指定したマス:横" + point.getRow() + "縦：" + point.getColumn());
             return;
         }
-        for(String[] maps : this.map){
-            Stream.of(maps).filter(characterName -> character.toString().equals(characterName))
-                    .map(beforeMove -> DOT).toArray(String[]::new);
+        for(int i = 0; i < map.length; i++){
+            for(int j = 0; j < map[i].length; i++){
+                if(this.map[i][j].equals(character.toString())){
+                    this.map[i][i] = DOT;
+                }
+            }
         }
         this.map[point.getRow()][point.getColumn()] = character.toString();
     }
 
     public void scene(){
-        Stream.of(map).forEach(System.out::println);
+        for(int i = 0; i < map.length; i++){
+            for(int j = 0; j < map[i].length; j++){
+                System.out.print(map[i][j]);
+            }
+            System.out.println();
+        }
     }
 }

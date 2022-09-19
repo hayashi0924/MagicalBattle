@@ -16,23 +16,18 @@ public class Character {
     private final AttackPoint attackPoint;
     private final Type type;
     private final Magic magic;
-    private final Point point;
 
-    public Character(Name name, HitPoint hitPoint, AttackPoint attackPoint, Type type, Magic magic, Point point) {
+    public Character(Name name, HitPoint hitPoint, AttackPoint attackPoint, Type type, Magic magic) {
         this.name = name;
         this.hitPoint = hitPoint;
         this.attackPoint = attackPoint;
         this.type = type;
         this.magic = magic;
-        this.point = point;
+
     }
 
     public Type typeIs() {
         return this.type;
-    }
-
-    public Point pointIs() {
-        return this.point;
     }
 
     private void damaged(final AttackPoint attackPoint) {
@@ -66,16 +61,12 @@ public class Character {
             return false;
         }
         boolean valid = object.name.equals(this.name) && object.hitPoint.equals(this.hitPoint) && object.attackPoint.equals(this.attackPoint)
-                && object.magic.equals(this.magic) && object.point.equals(this.point) && object.type.equals(this.type);
+                && object.magic.equals(this.magic) && object.type.equals(this.type);
         return valid;
     }
 
     public String toString() {
         return this.name.toString();
-    }
-
-    public Point move(Direction direction){
-        return Move.move(direction).go(this.pointIs());
     }
 
 }
