@@ -51,15 +51,14 @@ public class Field {
 
     public void move(Character character, Point point){
         if(!canMove(point)){
-            throw new IllegalArgumentException("移動先には障害物があります。移動先を変更してください");
+            System.out.println("障害物のあるマスです。別の座標を指定してください。指定したマス:横" + point.getRow() + "縦：" + point.getColumn());
+            return;
         }
         for(String[] maps : this.map){
             Stream.of(maps).filter(characterName -> character.toString().equals(characterName))
                     .map(beforeMove -> DOT).toArray(String[]::new);
         }
-
         this.map[point.getRow()][point.getColumn()] = character.toString();
-
     }
 
     public void scene(){
