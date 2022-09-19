@@ -3,6 +3,7 @@ package field;
 import character.Character;
 import character.move.Direction;
 import field.obstacle.Obstacle;
+import field.obstacle.Type;
 import point.Point;
 
 import java.util.Arrays;
