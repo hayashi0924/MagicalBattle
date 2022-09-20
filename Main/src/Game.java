@@ -29,10 +29,5 @@ public class Game {
         field.on(enemy, Point.init(9, 14));
 
         field.move(hero, Point.init(1, 1));
-
-        field.scene();
-
-
-
     }
 }

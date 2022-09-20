@@ -65,6 +65,9 @@ public class Character {
         return valid;
     }
 
+    public String getName(){
+        return this.name.is();
+    }
     public String toString() {
         return this.name.toString();
     }

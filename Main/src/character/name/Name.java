@@ -16,6 +16,9 @@ public class Name {
         return new Name(name);
     }
 
+    public String is(){
+        return this.name;
+    }
     public String toString(){
         return this.name;
     }
