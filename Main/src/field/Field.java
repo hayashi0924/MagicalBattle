@@ -28,12 +28,15 @@ public class Field {
                 obstacle.typeIs().getName();
     }
 
+    private void fieldSetCharacterName(Character character, Point point){
+        this.map[point.getRow()][point.getColumn()] = character.getName();
+    }
     public void on(Character character, Point point){
         if(!canExit(point)){
             System.out.println("障害物があるため、そこからスタートすることはできません");
             throw new IllegalArgumentException("入力値が不正です。初期値に障害物があります。");
         }
-        this.map[point.getRow()][point.getColumn()] = character.getName();
+        fieldSetCharacterName(character, point);
     }
 
     private boolean canExit(Point point){
@@ -61,7 +64,7 @@ public class Field {
                 }
             }
         }
-        this.map[point.getRow()][point.getColumn()] = character.getName();
+        fieldSetCharacterName(character, point);
     }
 
     public void scene(){
