@@ -53,7 +53,7 @@ public class Field {
             System.out.println("障害物のあるマスです。別の座標を指定してください。指定したマス:横" + point.getRow() + "縦：" + point.getColumn());
             return;
         }
-        if(!this.map[point.getRow()][point.getColumn()].equals(".")){
+        if(!isNothingAhead(point)){
             System.out.println("敵と遭遇！");
             return;
         }
@@ -67,6 +67,9 @@ public class Field {
         fieldSetCharacterName(character, point);
     }
 
+    private boolean isNothingAhead(Point point){
+        return this.map[point.getRow()][point.getColumn()].equals(".");
+    }
     public void scene(){
         for(int i = 0; i < map.length; i++){
             for(int j = 0; j < map[i].length; j++){
