@@ -1,3 +1,3 @@
-.idea/*;
-.MagicalBattle..idea;
-out/*;
+/.idea;
+/.MagicalBattle..idea;
+/out;
