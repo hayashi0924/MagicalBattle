@@ -3,7 +3,6 @@ import character.hitPoint.HitPoint;
 import character.magic.Magic;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
-import character.type.Types;
 import field.Field;
 import field.obstacle.Obstacle;
 import field.obstacle.Type;
@@ -11,7 +10,7 @@ import point.Point;
 import static character.type.Types.DIRT;
 import static character.type.Types.FIRE;
 
-public class Game {
+public class Main {
     public static void main(String[] args) {
         Character hero =
                 new Character(Name.init("林"), HitPoint.init(1000), AttackPoint.init(30),
