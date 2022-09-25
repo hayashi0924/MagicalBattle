@@ -29,8 +29,8 @@ public class Main {
         field.on(enemy, Point.init(9, 14));
 
         MoveController controller = MoveController.fieldSet(field);
-        controller.move(hero, Point.init(2, 2));
+        controller.move(hero, Point.init(9, 14));
 
-        field.scene();
+
     }
 }

@@ -5,6 +5,8 @@ import point.Point;
 
 public class MoveController {
     private Field field;
+    private Character hero;
+    private Character enemy;
 
     private MoveController(Field field){
         this.field = field;
@@ -20,9 +22,7 @@ public class MoveController {
         }
         if(this.field.isEncounterEnemy(point)){
             /**
-             * バトル開始。
-             * 詳細は別クラスで定義
-             * 勝ったら処理継続。負けたら処理を中断し、ゲームが終わる。
+             *
              */
         }
         this.field.move(character, point);

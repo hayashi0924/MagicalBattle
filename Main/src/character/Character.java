@@ -3,10 +3,7 @@ package character;
 import character.hitPoint.HitPoint;
 import character.attackPoint.AttackPoint;
 import character.magic.Magic;
-import character.move.Direction;
-import character.move.Move;
 import character.name.Name;
-import point.Point;
 import character.type.Type;
 
 
@@ -23,7 +20,9 @@ public class Character {
         this.attackPoint = attackPoint;
         this.type = type;
         this.magic = magic;
-
+    }
+    static Character BattleWinner(Character character) {
+        return new Character(character.name, character.hitPoint, character.attackPoint, character.type, character.magic);
     }
 
     public Type typeIs() {
@@ -72,4 +71,7 @@ public class Character {
         return this.name.toString();
     }
 
+    public boolean isAlive(){
+        return this.hitPoint.getValue() >= 0;
+    }
 }
