@@ -9,6 +9,9 @@ public enum Type {
     Type(String type){
         this.type = type;
     }
+    public String getName(){
+        return this.type;
+    }
 
     @Override
     public String toString() {

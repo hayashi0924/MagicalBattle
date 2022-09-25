@@ -1,21 +1,19 @@
 package field;
 
 import character.Character;
-import character.move.Direction;
 import field.obstacle.Obstacle;
 import field.obstacle.Type;
 import point.Point;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class Field {
-    private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+    private String[][] map;
     private static final String DOT = ".";
 
     private Field(){
-        for(int i =0; Range.rowIsValid(i - 1); i++){
-            for(int j = 0; Range.columnIsValid(j - 1); j++){
+        this.map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+        for(int i =0; i < Range.MAX_ROW; i++){
+            for(int j = 0; j < Range.MAX_COLUMN; j++){
                 map[i][j] = DOT;
             }
         }
@@ -24,45 +22,54 @@ public class Field {
     public static Field create(){
         return new Field();
     }
-
-
-
-    public void obstacleInit(Obstacle obstacle){
+    public void obstacleOn(Obstacle obstacle){
         this.map[obstacle.pointIs().getRow()][obstacle.pointIs().getColumn()] =
-                obstacle.typeIs().toString();
+                obstacle.typeIs().getName();
+    }
+    public void on(Character character, Point point){
+        if(isObstacleAhead(point)){
+            System.out.println("障害物があるため、そこからスタートすることはできません");
+            throw new IllegalArgumentException("入力値が不正です。初期値に障害物があります。");
+        }
+        fieldSetCharacterName(character, point);
+    }
+    private void fieldSetCharacterName(Character character, Point point){
+        this.map[point.getRow()][point.getColumn()] = character.getName();
     }
 
-    public void normalPoint(Point point){
-        this.map[point.getRow()][point.getColumn()] = DOT;
-    }
 
-    public void charPoint(Character character){
-        this.map[character.pointIs().getRow()][character.pointIs().getColumn()] = character.toString();
-    }
-
-    private boolean canMove(Point point){
+    boolean isObstacleAhead(Point point){
         for(Type types : Type.values()){
-            if(this.map[point.getRow()][point.getColumn()].equals(types.toString())){
-                return false;
+            if(this.map[point.getRow()][point.getColumn()].equals(types.getName())){
+                return true;
             }
         }
-        return true;
+        return false;
+    }
+    boolean isNothingAhead(Point point){
+        return this.map[point.getRow()][point.getColumn()].equals(".");
+    }
+    boolean isEncounterEnemy(Point point){
+        return !(!isObstacleAhead(point) && isNothingAhead(point));
     }
 
-    public void move(Character character, Point point){
-        if(!canMove(point)){
-            throw new IllegalArgumentException("移動先には障害物があります。移動先を変更してください");
-        }
-        for(String[] maps : this.map){
-            Stream.of(maps).filter(characterName -> character.toString().equals(characterName))
-                    .map(beforeMove -> DOT).toArray(String[]::new);
-        }
 
-        this.map[point.getRow()][point.getColumn()] = character.toString();
-
+    void move(Character character, Point point){
+        for(int i = 0; i < map.length; i++){
+            for(int j = 0; j < map[i].length; j++){
+                if(this.map[i][j].equals(character.getName())){
+                    this.map[i][i] = DOT;
+                }
+            }
+        }
+        fieldSetCharacterName(character, point);
     }
-
     public void scene(){
-        Stream.of(map).forEach(System.out::println);
+        for(int i = 0; i < map.length; i++){
+            for(int j = 0; j < map[i].length; j++){
+                System.out.print(map[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
