@@ -3,10 +3,10 @@ package field;
 import character.Character;
 import point.Point;
 
-public class Game {
+public class MoveController {
     private Field field;
 
-    Game(Field field){
+    MoveController(Field field){
         this.field = Field.create();
     }
 
@@ -18,6 +18,11 @@ public class Game {
         if(this.field.isNothingAhead(point)){
             this.field.move(character, point);
             return;
+        }
+        if(this.field.isEncounter(point)){
+            /**
+             * 
+             */
         }
 
     }

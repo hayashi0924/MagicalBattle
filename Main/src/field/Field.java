@@ -49,11 +49,8 @@ public class Field {
     boolean isNothingAhead(Point point){
         return this.map[point.getRow()][point.getColumn()].equals(".");
     }
-    public boolean isEncounter(Character hero, Character enemy){
-        if(!searchCharcterPoint(hero).equals(searchCharcterPoint(enemy))){
-            return false;
-        }
-        return true;
+    boolean isEncounter(Point point){
+        return !(!isObstacleAhead(point) && isNothingAhead(point));
     }
 
 
