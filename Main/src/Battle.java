@@ -10,4 +10,8 @@ public class Battle {
     public static Battle start(Character hero, Character enemy){
         return new Battle(hero, enemy);
     }
+
+    public void attack(Character from, Character to){
+
+    }
 }

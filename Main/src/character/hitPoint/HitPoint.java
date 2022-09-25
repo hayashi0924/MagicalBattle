@@ -40,7 +40,7 @@ public class HitPoint {
      */
     public HitPoint minus(final AttackPoint attackPoint){
         // まずは引く
-        final int after = this.hitPoint - attackPoint.getMagicPoint();
+        final int after = this.hitPoint - attackPoint.getAttackPoint();
         return attach(after);
     }
 }
