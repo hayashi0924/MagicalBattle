@@ -4,6 +4,7 @@ import character.magic.Magic;
 import character.attackPoint.AttackPoint;
 import character.name.Name;
 import field.Field;
+import field.MoveController;
 import field.obstacle.Obstacle;
 import field.obstacle.Type;
 import point.Point;
@@ -21,12 +22,15 @@ public class Main {
                         character.type.Type.init(DIRT), Magic.WEAK_DIRT);
 
         Field field = Field.create();
-        field.obstacleInit(new Obstacle((Type.ROCK), Point.init(5, 5)));
-        field.obstacleInit(new Obstacle((Type.WEED), Point.init(6, 6)));
+        field.obstacleOn(new Obstacle((Type.ROCK), Point.init(5, 5)));
+        field.obstacleOn(new Obstacle((Type.WEED), Point.init(6, 6)));
 
         field.on(hero, Point.init(0, 0));
         field.on(enemy, Point.init(9, 14));
 
-        field.move(hero, Point.init(1, 1));
+        MoveController controller = MoveController.fieldSet(field);
+        controller.move(hero, Point.init(2, 2));
+
+        field.scene();
     }
 }

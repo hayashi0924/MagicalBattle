@@ -22,12 +22,12 @@ public class Field {
     public static Field create(){
         return new Field();
     }
-    public void obstacleInit(Obstacle obstacle){
+    public void obstacleOn(Obstacle obstacle){
         this.map[obstacle.pointIs().getRow()][obstacle.pointIs().getColumn()] =
                 obstacle.typeIs().getName();
     }
     public void on(Character character, Point point){
-        if(!isObstacleAhead(point)){
+        if(isObstacleAhead(point)){
             System.out.println("障害物があるため、そこからスタートすることはできません");
             throw new IllegalArgumentException("入力値が不正です。初期値に障害物があります。");
         }
@@ -49,7 +49,7 @@ public class Field {
     boolean isNothingAhead(Point point){
         return this.map[point.getRow()][point.getColumn()].equals(".");
     }
-    boolean isEncounter(Point point){
+    boolean isEncounterEnemy(Point point){
         return !(!isObstacleAhead(point) && isNothingAhead(point));
     }
 

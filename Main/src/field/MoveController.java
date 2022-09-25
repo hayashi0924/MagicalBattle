@@ -6,8 +6,11 @@ import point.Point;
 public class MoveController {
     private Field field;
 
-    MoveController(Field field){
-        this.field = Field.create();
+    private MoveController(Field field){
+        this.field = field;
+    }
+    public static MoveController fieldSet(Field field){
+        return new MoveController(field);
     }
 
     public void move(Character character, Point point){
@@ -15,15 +18,13 @@ public class MoveController {
             System.out.println("There are obstacles at the destination. Please specify another point.");
             return ;
         }
-        if(this.field.isNothingAhead(point)){
-            this.field.move(character, point);
-            return;
-        }
-        if(this.field.isEncounter(point)){
+        if(this.field.isEncounterEnemy(point)){
             /**
-             * 
+             * バトル開始。
+             * 詳細は別クラスで定義
+             * 勝ったら処理継続。負けたら処理を中断し、ゲームが終わる。
              */
         }
-
+        this.field.move(character, point);
     }
 }
