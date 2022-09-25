@@ -44,15 +44,15 @@ public class Character {
         boolean compatibilityIsEffective = this.type.getWeakType() == enemy.type.getStrongType();
         boolean compatibilityIsIneffective = this.type.getStrongType() == enemy.type.getWeakType();
 
-        if (!(compatibilityIsEffective && compatibilityIsIneffective)) {
-            enemy.damaged(this.attackPoint.add(baseMagicAttackPoint));
-        }
         if (compatibilityIsEffective) {
             enemy.damaged(this.attackPoint.add(baseMagicAttackPoint.effective()));
+            return;
         }
         if (compatibilityIsIneffective) {
             enemy.damaged(this.attackPoint.add(baseMagicAttackPoint.ineffective()));
+            return;
         }
+        enemy.damaged(this.attackPoint.add(baseMagicAttackPoint));
     }
 
     @Override
