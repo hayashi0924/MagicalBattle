@@ -72,16 +72,4 @@ public class Field {
             System.out.println();
         }
     }
-
-
-    private Point searchCharcterPoint(Character character){
-        for (int i = 0; i < map.length; i++) {
-            for(int j = 0; j < map[i].length; j++){
-                if(map[i][j].equals(character.getName())){
-                    return Point.init(i, j);
-                }
-            }
-        }
-        throw new IllegalArgumentException("相手が存在しません。フィールドに敵を設定してください");
-    }
 }
