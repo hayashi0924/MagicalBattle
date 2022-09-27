@@ -3,6 +3,7 @@ package field;
 import character.Character;
 import point.Point;
 
+//ここ
 public class MoveController {
     private Field field;
     private Character hero;
@@ -25,6 +26,6 @@ public class MoveController {
              *
              */
         }
-        this.field.move(character, point);
+
     }
 }

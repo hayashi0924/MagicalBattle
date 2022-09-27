@@ -7,20 +7,24 @@ import point.Point;
 
 
 public class Field {
-    private String[][] map;
+    private String[][] map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
     private static final String DOT = ".";
 
-    private Field(){
-        this.map = new String[Range.MAX_ROW][Range.MAX_COLUMN];
-        for(int i =0; i < Range.MAX_ROW; i++){
-            for(int j = 0; j < Range.MAX_COLUMN; j++){
-                map[i][j] = DOT;
-            }
-        }
+    //ここ
+    //障害物はcreateの時にあると良いかも
+    //コンストラクタの引数
+    private Field(String[][] map){
+        this.map = map;
     }
 
-    public static Field create(){
-        return new Field();
+    public static Field normalStage(){
+        String[][] nomalField = new String[Range.MAX_ROW][Range.MAX_COLUMN];
+        for (int i = 0; i < nomalField.length; i++) {
+            for (int j = 0; j < nomalField[i].length; j++) {
+                nomalField[i][i] = DOT;
+            }
+        }
+        return new Field(nomalField);
     }
     public void obstacleOn(Obstacle obstacle){
         this.map[obstacle.pointIs().getRow()][obstacle.pointIs().getColumn()] =
@@ -54,7 +58,7 @@ public class Field {
     }
 
 
-    void move(Character character, Point point){
+    public void deployment(Character character, Point point){
         for(int i = 0; i < map.length; i++){
             for(int j = 0; j < map[i].length; j++){
                 if(this.map[i][j].equals(character.getName())){

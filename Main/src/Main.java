@@ -21,16 +21,18 @@ public class Main {
                 new Character(Name.init("早希"), HitPoint.init(100), AttackPoint.init(5),
                         character.type.Type.init(DIRT), Magic.WEAK_DIRT);
 
-        Field field = Field.create();
+        Field field = Field.normalStage();
         field.obstacleOn(new Obstacle((Type.ROCK), Point.init(5, 5)));
         field.obstacleOn(new Obstacle((Type.WEED), Point.init(6, 6)));
+
+        field.scene();
 
         field.on(hero, Point.init(0, 0));
         field.on(enemy, Point.init(9, 14));
 
-        MoveController controller = MoveController.fieldSet(field);
-        controller.move(hero, Point.init(9, 14));
+        hero.move(field, Point.init(1, 1));
+        field.scene();
 
-
+        
     }
 }

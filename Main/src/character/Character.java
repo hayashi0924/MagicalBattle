@@ -1,10 +1,12 @@
 package character;
 
-import character.hitPoint.HitPoint;
 import character.attackPoint.AttackPoint;
-import character.magic.Magic;
+import character.hitPoint.HitPoint;
+import character.type.*;
+import character.magic.*;
 import character.name.Name;
-import character.type.Type;
+import field.Field;
+import point.*;
 
 
 public class Character {
@@ -73,5 +75,9 @@ public class Character {
 
     public boolean isAlive(){
         return this.hitPoint.getValue() >= 0;
+    }
+
+    public void move(Field field, Point point){
+        field.deployment(this, point);
     }
 }

@@ -1,6 +1,6 @@
 package character.name;
 
-import character.name.rule.Decision;
+import character.name.rule.*;
 
 public class Name {
     private final String name;
