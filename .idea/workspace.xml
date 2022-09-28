@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="274d89e3-3363-403e-89e6-f6085e65f9eb" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/attackPoint/AttackPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/attackPoint/AttackPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/attackPoint/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/attackPoint/Decision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/hitPoint/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/hitPoint/Decision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/hitPoint/HitPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/hitPoint/HitPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/magic/AttackPointOfSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/magic/AttackPointOfSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/magic/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/magic/Magic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Down.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Down.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Left.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Left.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/MoveLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/MoveLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Right.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/move/Up.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/move/Up.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/rule/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/rule/Decision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/rule/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/rule/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/rule/NamingRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/rule/NamingRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/rule/WordLengthRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/rule/WordLengthRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/name/rule/WordTypeRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/name/rule/WordTypeRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/Types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/compatibility/Compatibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/compatibility/Compatibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/compatibility/CompatibilityCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/compatibility/CompatibilityCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/compatibility/DirtTypeCompatibilityCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/compatibility/DirtTypeCompatibilityCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/compatibility/FireTypeCompatibilityCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/compatibility/FireTypeCompatibilityCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/character/type/compatibility/WaterTypeCompatibilityCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/character/type/compatibility/WaterTypeCompatibilityCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/field/MoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/MoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/field/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/field/obstacle/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/obstacle/Obstacle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/field/obstacle/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/obstacle/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/src/point/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/point/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/character/CharacterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/character/CharacterTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2FN8pjFXEy4gWiDASzYcL6c2Lyj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "project.structure.last.edited": "モジュール",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="character" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CharacterTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MagicBattle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharacterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagicBattle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="character.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="character" />
+      <option name="MAIN_CLASS_NAME" value="character.CharacterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CharacterTest" />
+        <item itemvalue="アプリケーション.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="274d89e3-3363-403e-89e6-f6085e65f9eb" name="変更" comment="" />
+      <created>1664321365715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664321365715</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
